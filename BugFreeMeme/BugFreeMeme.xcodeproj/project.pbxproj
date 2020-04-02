@@ -23,6 +23,11 @@
 		79574F082436758500013774 /* NiblessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79574F072436758500013774 /* NiblessView.swift */; };
 		79574F0B243675B800013774 /* NiblessTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79574F0A243675B800013774 /* NiblessTableView.swift */; };
 		79574F0D243675DF00013774 /* NiblessNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79574F0C243675DF00013774 /* NiblessNavigationController.swift */; };
+		79574F1C2436761000013774 /* BugFreeMeme_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79574F132436761000013774 /* BugFreeMeme_iOS.framework */; };
+		79574F232436761000013774 /* BugFreeMeme_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79574F222436761000013774 /* BugFreeMeme_iOSTests.swift */; };
+		79574F252436761000013774 /* BugFreeMeme_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 79574F152436761000013774 /* BugFreeMeme_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		79574F282436761000013774 /* BugFreeMeme_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79574F132436761000013774 /* BugFreeMeme_iOS.framework */; };
+		79574F292436761000013774 /* BugFreeMeme_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 79574F132436761000013774 /* BugFreeMeme_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +59,27 @@
 			remoteGlobalIDString = 79574EE5243674FE00013774;
 			remoteInfo = BugFreeMemeUIKit;
 		};
+		79574F1D2436761000013774 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 79574EB4243674BF00013774 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 79574F122436761000013774;
+			remoteInfo = BugFreeMeme_iOS;
+		};
+		79574F1F2436761000013774 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 79574EB4243674BF00013774 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 79574EBB243674BF00013774;
+			remoteInfo = BugFreeMeme;
+		};
+		79574F262436761000013774 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 79574EB4243674BF00013774 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 79574F122436761000013774;
+			remoteInfo = BugFreeMeme_iOS;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -64,6 +90,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				79574EFC243674FE00013774 /* BugFreeMemeUIKit.framework in Embed Frameworks */,
+				79574F292436761000013774 /* BugFreeMeme_iOS.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -92,6 +119,12 @@
 		79574F072436758500013774 /* NiblessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiblessView.swift; sourceTree = "<group>"; };
 		79574F0A243675B800013774 /* NiblessTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiblessTableView.swift; sourceTree = "<group>"; };
 		79574F0C243675DF00013774 /* NiblessNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiblessNavigationController.swift; sourceTree = "<group>"; };
+		79574F132436761000013774 /* BugFreeMeme_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BugFreeMeme_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		79574F152436761000013774 /* BugFreeMeme_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BugFreeMeme_iOS.h; sourceTree = "<group>"; };
+		79574F162436761000013774 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79574F1B2436761000013774 /* BugFreeMeme_iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BugFreeMeme_iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		79574F222436761000013774 /* BugFreeMeme_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugFreeMeme_iOSTests.swift; sourceTree = "<group>"; };
+		79574F242436761000013774 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +133,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				79574EFB243674FE00013774 /* BugFreeMemeUIKit.framework in Frameworks */,
+				79574F282436761000013774 /* BugFreeMeme_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +159,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		79574F102436761000013774 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79574F182436761000013774 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79574F1C2436761000013774 /* BugFreeMeme_iOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -133,8 +182,10 @@
 			children = (
 				79574EBE243674BF00013774 /* BugFreeMeme */,
 				79574EE7243674FE00013774 /* BugFreeMemeUIKit */,
+				79574F142436761000013774 /* BugFreeMeme_iOS */,
 				79574ED5243674C100013774 /* BugFreeMemeTests */,
 				79574EF4243674FE00013774 /* BugFreeMemeUIKitTests */,
+				79574F212436761000013774 /* BugFreeMeme_iOSTests */,
 				79574EBD243674BF00013774 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -146,6 +197,8 @@
 				79574ED2243674C100013774 /* BugFreeMemeTests.xctest */,
 				79574EE6243674FE00013774 /* BugFreeMemeUIKit.framework */,
 				79574EEE243674FE00013774 /* BugFreeMemeUIKitTests.xctest */,
+				79574F132436761000013774 /* BugFreeMeme_iOS.framework */,
+				79574F1B2436761000013774 /* BugFreeMeme_iOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -203,6 +256,24 @@
 			path = "Nibless Components";
 			sourceTree = "<group>";
 		};
+		79574F142436761000013774 /* BugFreeMeme_iOS */ = {
+			isa = PBXGroup;
+			children = (
+				79574F152436761000013774 /* BugFreeMeme_iOS.h */,
+				79574F162436761000013774 /* Info.plist */,
+			);
+			path = BugFreeMeme_iOS;
+			sourceTree = "<group>";
+		};
+		79574F212436761000013774 /* BugFreeMeme_iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				79574F222436761000013774 /* BugFreeMeme_iOSTests.swift */,
+				79574F242436761000013774 /* Info.plist */,
+			);
+			path = BugFreeMeme_iOSTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -211,6 +282,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				79574EF8243674FE00013774 /* BugFreeMemeUIKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79574F0E2436761000013774 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79574F252436761000013774 /* BugFreeMeme_iOS.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +309,7 @@
 			);
 			dependencies = (
 				79574EFA243674FE00013774 /* PBXTargetDependency */,
+				79574F272436761000013774 /* PBXTargetDependency */,
 			);
 			name = BugFreeMeme;
 			productName = BugFreeMeme;
@@ -291,6 +371,43 @@
 			productReference = 79574EEE243674FE00013774 /* BugFreeMemeUIKitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		79574F122436761000013774 /* BugFreeMeme_iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79574F2A2436761000013774 /* Build configuration list for PBXNativeTarget "BugFreeMeme_iOS" */;
+			buildPhases = (
+				79574F0E2436761000013774 /* Headers */,
+				79574F0F2436761000013774 /* Sources */,
+				79574F102436761000013774 /* Frameworks */,
+				79574F112436761000013774 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BugFreeMeme_iOS;
+			productName = BugFreeMeme_iOS;
+			productReference = 79574F132436761000013774 /* BugFreeMeme_iOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		79574F1A2436761000013774 /* BugFreeMeme_iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79574F2D2436761000013774 /* Build configuration list for PBXNativeTarget "BugFreeMeme_iOSTests" */;
+			buildPhases = (
+				79574F172436761000013774 /* Sources */,
+				79574F182436761000013774 /* Frameworks */,
+				79574F192436761000013774 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				79574F1E2436761000013774 /* PBXTargetDependency */,
+				79574F202436761000013774 /* PBXTargetDependency */,
+			);
+			name = BugFreeMeme_iOSTests;
+			productName = BugFreeMeme_iOSTests;
+			productReference = 79574F1B2436761000013774 /* BugFreeMeme_iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -316,6 +433,13 @@
 						CreatedOnToolsVersion = 11.4;
 						TestTargetID = 79574EBB243674BF00013774;
 					};
+					79574F122436761000013774 = {
+						CreatedOnToolsVersion = 11.4;
+					};
+					79574F1A2436761000013774 = {
+						CreatedOnToolsVersion = 11.4;
+						TestTargetID = 79574EBB243674BF00013774;
+					};
 				};
 			};
 			buildConfigurationList = 79574EB7243674BF00013774 /* Build configuration list for PBXProject "BugFreeMeme" */;
@@ -335,6 +459,8 @@
 				79574ED1243674C100013774 /* BugFreeMemeTests */,
 				79574EE5243674FE00013774 /* BugFreeMemeUIKit */,
 				79574EED243674FE00013774 /* BugFreeMemeUIKitTests */,
+				79574F122436761000013774 /* BugFreeMeme_iOS */,
+				79574F1A2436761000013774 /* BugFreeMeme_iOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -365,6 +491,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		79574EEC243674FE00013774 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79574F112436761000013774 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79574F192436761000013774 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -411,6 +551,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		79574F0F2436761000013774 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79574F172436761000013774 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79574F232436761000013774 /* BugFreeMeme_iOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -433,6 +588,21 @@
 			isa = PBXTargetDependency;
 			target = 79574EE5243674FE00013774 /* BugFreeMemeUIKit */;
 			targetProxy = 79574EF9243674FE00013774 /* PBXContainerItemProxy */;
+		};
+		79574F1E2436761000013774 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 79574F122436761000013774 /* BugFreeMeme_iOS */;
+			targetProxy = 79574F1D2436761000013774 /* PBXContainerItemProxy */;
+		};
+		79574F202436761000013774 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 79574EBB243674BF00013774 /* BugFreeMeme */;
+			targetProxy = 79574F1F2436761000013774 /* PBXContainerItemProxy */;
+		};
+		79574F272436761000013774 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 79574F122436761000013774 /* BugFreeMeme_iOS */;
+			targetProxy = 79574F262436761000013774 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -749,6 +919,100 @@
 			};
 			name = Release;
 		};
+		79574F2B2436761000013774 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 8N376JP4MK;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = BugFreeMeme_iOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Volonbolon.BugFreeMeme-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		79574F2C2436761000013774 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 8N376JP4MK;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = BugFreeMeme_iOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Volonbolon.BugFreeMeme-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		79574F2E2436761000013774 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8N376JP4MK;
+				INFOPLIST_FILE = BugFreeMeme_iOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Volonbolon.BugFreeMeme-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BugFreeMeme.app/BugFreeMeme";
+			};
+			name = Debug;
+		};
+		79574F2F2436761000013774 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8N376JP4MK;
+				INFOPLIST_FILE = BugFreeMeme_iOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Volonbolon.BugFreeMeme-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BugFreeMeme.app/BugFreeMeme";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -793,6 +1057,24 @@
 			buildConfigurations = (
 				79574F02243674FE00013774 /* Debug */,
 				79574F03243674FE00013774 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		79574F2A2436761000013774 /* Build configuration list for PBXNativeTarget "BugFreeMeme_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79574F2B2436761000013774 /* Debug */,
+				79574F2C2436761000013774 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		79574F2D2436761000013774 /* Build configuration list for PBXNativeTarget "BugFreeMeme_iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79574F2E2436761000013774 /* Debug */,
+				79574F2F2436761000013774 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
