@@ -19,6 +19,10 @@
 		79574EF8243674FE00013774 /* BugFreeMemeUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 79574EE8243674FE00013774 /* BugFreeMemeUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		79574EFB243674FE00013774 /* BugFreeMemeUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79574EE6243674FE00013774 /* BugFreeMemeUIKit.framework */; };
 		79574EFC243674FE00013774 /* BugFreeMemeUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 79574EE6243674FE00013774 /* BugFreeMemeUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		79574F062436755600013774 /* NiblessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79574F052436755600013774 /* NiblessViewController.swift */; };
+		79574F082436758500013774 /* NiblessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79574F072436758500013774 /* NiblessView.swift */; };
+		79574F0B243675B800013774 /* NiblessTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79574F0A243675B800013774 /* NiblessTableView.swift */; };
+		79574F0D243675DF00013774 /* NiblessNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79574F0C243675DF00013774 /* NiblessNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +88,10 @@
 		79574EEE243674FE00013774 /* BugFreeMemeUIKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BugFreeMemeUIKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79574EF5243674FE00013774 /* BugFreeMemeUIKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugFreeMemeUIKitTests.swift; sourceTree = "<group>"; };
 		79574EF7243674FE00013774 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79574F052436755600013774 /* NiblessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiblessViewController.swift; sourceTree = "<group>"; };
+		79574F072436758500013774 /* NiblessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiblessView.swift; sourceTree = "<group>"; };
+		79574F0A243675B800013774 /* NiblessTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiblessTableView.swift; sourceTree = "<group>"; };
+		79574F0C243675DF00013774 /* NiblessNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiblessNavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,8 +132,8 @@
 			isa = PBXGroup;
 			children = (
 				79574EBE243674BF00013774 /* BugFreeMeme */,
-				79574ED5243674C100013774 /* BugFreeMemeTests */,
 				79574EE7243674FE00013774 /* BugFreeMemeUIKit */,
+				79574ED5243674C100013774 /* BugFreeMemeTests */,
 				79574EF4243674FE00013774 /* BugFreeMemeUIKitTests */,
 				79574EBD243674BF00013774 /* Products */,
 			);
@@ -168,6 +176,7 @@
 		79574EE7243674FE00013774 /* BugFreeMemeUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				79574F042436752D00013774 /* Nibless Components */,
 				79574EE8243674FE00013774 /* BugFreeMemeUIKit.h */,
 				79574EE9243674FE00013774 /* Info.plist */,
 			);
@@ -181,6 +190,17 @@
 				79574EF7243674FE00013774 /* Info.plist */,
 			);
 			path = BugFreeMemeUIKitTests;
+			sourceTree = "<group>";
+		};
+		79574F042436752D00013774 /* Nibless Components */ = {
+			isa = PBXGroup;
+			children = (
+				79574F052436755600013774 /* NiblessViewController.swift */,
+				79574F072436758500013774 /* NiblessView.swift */,
+				79574F0A243675B800013774 /* NiblessTableView.swift */,
+				79574F0C243675DF00013774 /* NiblessNavigationController.swift */,
+			);
+			path = "Nibless Components";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,6 +310,7 @@
 					};
 					79574EE5243674FE00013774 = {
 						CreatedOnToolsVersion = 11.4;
+						LastSwiftMigration = 1140;
 					};
 					79574EED243674FE00013774 = {
 						CreatedOnToolsVersion = 11.4;
@@ -375,6 +396,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79574F0D243675DF00013774 /* NiblessNavigationController.swift in Sources */,
+				79574F062436755600013774 /* NiblessViewController.swift in Sources */,
+				79574F0B243675B800013774 /* NiblessTableView.swift in Sources */,
+				79574F082436758500013774 /* NiblessView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -548,6 +573,7 @@
 		79574EDC243674C100013774 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8N376JP4MK;
@@ -566,6 +592,7 @@
 		79574EDD243674C100013774 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8N376JP4MK;
@@ -628,6 +655,7 @@
 		79574EFE243674FE00013774 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -645,6 +673,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Volonbolon.BugFreeMemeUIKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -655,6 +684,7 @@
 		79574EFF243674FE00013774 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
