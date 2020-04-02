@@ -7,24 +7,20 @@
 //
 
 import UIKit
+import BugFreeMemeUIKit
 
-class MainViewController: NiblessViewController {
+open class MainViewController: NiblessViewController {
+    let userInterface: MainRootView
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    init(userInterface: MainRootView) {
+        self.userInterface = userInterface
 
-        // Do any additional setup after loading the view.
+        super.init()
     }
-    
 
-    /*
-    // MARK: - Navigation
+    open override func loadView() {
+        super.loadView()
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        self.view = userInterface
     }
-    */
-
 }

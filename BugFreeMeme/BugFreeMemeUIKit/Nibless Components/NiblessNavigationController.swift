@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NiblessNavigationController: UINavigationController {
+open class NiblessNavigationController: UINavigationController {
     public init() {
         super.init(nibName: nil, bundle: nil)
     }

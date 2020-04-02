@@ -7,24 +7,21 @@
 //
 
 import UIKit
+import BugFreeMemeUIKit
 
-class RootViewController: NiblessViewController {
+public class RootViewController: NiblessNavigationController {
+    let mainViewController: MainViewController
 
-    override func viewDidLoad() {
+    init(mainViewController: MainViewController) {
+        self.mainViewController = mainViewController
+
+        super.init()
+    }
+
+    override public func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.pushViewController(self.mainViewController,
+                                animated: false)
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

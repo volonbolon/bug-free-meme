@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		79574EC0243674BF00013774 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79574EBF243674BF00013774 /* AppDelegate.swift */; };
-		79574EC2243674BF00013774 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79574EC1243674BF00013774 /* SceneDelegate.swift */; };
-		79574EC4243674BF00013774 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79574EC3243674BF00013774 /* ViewController.swift */; };
-		79574EC7243674BF00013774 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79574EC5243674BF00013774 /* Main.storyboard */; };
 		79574EC9243674C100013774 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79574EC8243674C100013774 /* Assets.xcassets */; };
 		79574ECC243674C100013774 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79574ECA243674C100013774 /* LaunchScreen.storyboard */; };
 		79574ED7243674C100013774 /* BugFreeMemeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79574ED6243674C100013774 /* BugFreeMemeTests.swift */; };
@@ -20,14 +17,18 @@
 		79574EFB243674FE00013774 /* BugFreeMemeUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79574EE6243674FE00013774 /* BugFreeMemeUIKit.framework */; };
 		79574EFC243674FE00013774 /* BugFreeMemeUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 79574EE6243674FE00013774 /* BugFreeMemeUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		79574F062436755600013774 /* NiblessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79574F052436755600013774 /* NiblessViewController.swift */; };
-		79574F082436758500013774 /* NiblessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79574F072436758500013774 /* NiblessView.swift */; };
-		79574F0B243675B800013774 /* NiblessTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79574F0A243675B800013774 /* NiblessTableView.swift */; };
-		79574F0D243675DF00013774 /* NiblessNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79574F0C243675DF00013774 /* NiblessNavigationController.swift */; };
 		79574F1C2436761000013774 /* BugFreeMeme_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79574F132436761000013774 /* BugFreeMeme_iOS.framework */; };
 		79574F232436761000013774 /* BugFreeMeme_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79574F222436761000013774 /* BugFreeMeme_iOSTests.swift */; };
 		79574F252436761000013774 /* BugFreeMeme_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 79574F152436761000013774 /* BugFreeMeme_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		79574F282436761000013774 /* BugFreeMeme_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79574F132436761000013774 /* BugFreeMeme_iOS.framework */; };
 		79574F292436761000013774 /* BugFreeMeme_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 79574F132436761000013774 /* BugFreeMeme_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		79574F312436767600013774 /* BugFreeMemeAppDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79574F302436767600013774 /* BugFreeMemeAppDependencyContainer.swift */; };
+		79574F352436771A00013774 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79574F342436771A00013774 /* RootViewController.swift */; };
+		79574F38243677DD00013774 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79574F37243677DD00013774 /* MainViewController.swift */; };
+		79574F3C2436787C00013774 /* MainRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79574F3B2436787C00013774 /* MainRootView.swift */; };
+		79574F3D24367D9000013774 /* NiblessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79574F072436758500013774 /* NiblessView.swift */; };
+		79574F3E24367D9500013774 /* NiblessTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79574F0A243675B800013774 /* NiblessTableView.swift */; };
+		79574F3F24367D9800013774 /* NiblessNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79574F0C243675DF00013774 /* NiblessNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,9 +101,6 @@
 /* Begin PBXFileReference section */
 		79574EBC243674BF00013774 /* BugFreeMeme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BugFreeMeme.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79574EBF243674BF00013774 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		79574EC1243674BF00013774 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		79574EC3243674BF00013774 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		79574EC6243674BF00013774 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		79574EC8243674C100013774 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79574ECB243674C100013774 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		79574ECD243674C100013774 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -125,6 +123,10 @@
 		79574F1B2436761000013774 /* BugFreeMeme_iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BugFreeMeme_iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79574F222436761000013774 /* BugFreeMeme_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugFreeMeme_iOSTests.swift; sourceTree = "<group>"; };
 		79574F242436761000013774 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79574F302436767600013774 /* BugFreeMemeAppDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugFreeMemeAppDependencyContainer.swift; sourceTree = "<group>"; };
+		79574F342436771A00013774 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		79574F37243677DD00013774 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		79574F3B2436787C00013774 /* MainRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRootView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,9 +209,6 @@
 			isa = PBXGroup;
 			children = (
 				79574EBF243674BF00013774 /* AppDelegate.swift */,
-				79574EC1243674BF00013774 /* SceneDelegate.swift */,
-				79574EC3243674BF00013774 /* ViewController.swift */,
-				79574EC5243674BF00013774 /* Main.storyboard */,
 				79574EC8243674C100013774 /* Assets.xcassets */,
 				79574ECA243674C100013774 /* LaunchScreen.storyboard */,
 				79574ECD243674C100013774 /* Info.plist */,
@@ -259,8 +258,11 @@
 		79574F142436761000013774 /* BugFreeMeme_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				79574F392436785200013774 /* User Interfaces */,
+				79574F32243676FB00013774 /* View Controllers */,
 				79574F152436761000013774 /* BugFreeMeme_iOS.h */,
 				79574F162436761000013774 /* Info.plist */,
+				79574F302436767600013774 /* BugFreeMemeAppDependencyContainer.swift */,
 			);
 			path = BugFreeMeme_iOS;
 			sourceTree = "<group>";
@@ -272,6 +274,47 @@
 				79574F242436761000013774 /* Info.plist */,
 			);
 			path = BugFreeMeme_iOSTests;
+			sourceTree = "<group>";
+		};
+		79574F32243676FB00013774 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				79574F36243677D000013774 /* Main */,
+				79574F332436770700013774 /* Root */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		79574F332436770700013774 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				79574F342436771A00013774 /* RootViewController.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		79574F36243677D000013774 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				79574F37243677DD00013774 /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		79574F392436785200013774 /* User Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				79574F3A2436786100013774 /* Main */,
+			);
+			path = "User Interfaces";
+			sourceTree = "<group>";
+		};
+		79574F3A2436786100013774 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				79574F3B2436787C00013774 /* MainRootView.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -435,6 +478,7 @@
 					};
 					79574F122436761000013774 = {
 						CreatedOnToolsVersion = 11.4;
+						LastSwiftMigration = 1140;
 					};
 					79574F1A2436761000013774 = {
 						CreatedOnToolsVersion = 11.4;
@@ -472,7 +516,6 @@
 			files = (
 				79574ECC243674C100013774 /* LaunchScreen.storyboard in Resources */,
 				79574EC9243674C100013774 /* Assets.xcassets in Resources */,
-				79574EC7243674BF00013774 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,9 +561,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79574EC4243674BF00013774 /* ViewController.swift in Sources */,
 				79574EC0243674BF00013774 /* AppDelegate.swift in Sources */,
-				79574EC2243674BF00013774 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,10 +577,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79574F0D243675DF00013774 /* NiblessNavigationController.swift in Sources */,
+				79574F3F24367D9800013774 /* NiblessNavigationController.swift in Sources */,
+				79574F3E24367D9500013774 /* NiblessTableView.swift in Sources */,
 				79574F062436755600013774 /* NiblessViewController.swift in Sources */,
-				79574F0B243675B800013774 /* NiblessTableView.swift in Sources */,
-				79574F082436758500013774 /* NiblessView.swift in Sources */,
+				79574F3D24367D9000013774 /* NiblessView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -555,6 +596,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79574F38243677DD00013774 /* MainViewController.swift in Sources */,
+				79574F3C2436787C00013774 /* MainRootView.swift in Sources */,
+				79574F352436771A00013774 /* RootViewController.swift in Sources */,
+				79574F312436767600013774 /* BugFreeMemeAppDependencyContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -607,14 +652,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		79574EC5243674BF00013774 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				79574EC6243674BF00013774 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		79574ECA243674C100013774 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -922,6 +959,7 @@
 		79574F2B2436761000013774 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -939,6 +977,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Volonbolon.BugFreeMeme-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -949,6 +988,7 @@
 		79574F2C2436761000013774 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NiblessTableView: UITableView {
+open class NiblessTableView: UITableView {
     public override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: style)
     }
