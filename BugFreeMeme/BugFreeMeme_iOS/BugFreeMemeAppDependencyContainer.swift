@@ -24,13 +24,28 @@ public struct BugFreeMemeAppDependencyContainer {
         return viewController
     }
 
+    public func makeStationsViewController(network: Network) -> StationsViewController {
+        let observable = Observable<[Station]>([])
+        let viewModel = StationsViewModel(observable: observable)
+        let tableViewDatasource = StationsTableViewDatasource(cellIdentifier: StationsView.StationsViewCellIdentifier,
+                                                              observable: observable)
+        let tableViewDelegate = StationsTableViewDelegate(viewModel: viewModel)
+        let userInterface = StationsView(stationsDatasource: tableViewDatasource,
+                                         stationsDelegate: tableViewDelegate,
+                                         viewModel: viewModel)
+        let viewController = StationsViewController(userInterface: userInterface,
+                                                    network: network)
+        return viewController
+    }
+
     public func makeMainViewController() -> MainViewController {
         let observable = Observable<[Network]>([])
         let viewModel = MainRootViewModel(observable: observable)
         let userInterface = MainRootView(viewModel: viewModel)
         let viewController = MainViewController(userInterface: userInterface,
                                                 refreshNetworksUseCaseFactory: self,
-                                                observable: observable)
+                                                observable: observable,
+                                                showStationsFactory: self.makeStationsViewController)
         viewModel.uxResponder = viewController
         return viewController
     }
@@ -44,3 +59,10 @@ extension BugFreeMemeAppDependencyContainer: RefreshNetworksUseCaseFactory {
         return useCase
     }
 }
+
+//extension BugFreeMemeAppDependencyContainer: ShowNetworkDetailsUseCaseFactory {
+//    public func makeShowNetworkDetailsUseCase() -> UseCase {
+//        let networkAPI = self.makeRemoteAPI()
+//        let useCase
+//    }
+//}

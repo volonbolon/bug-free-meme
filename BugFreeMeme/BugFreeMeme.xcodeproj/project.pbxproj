@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		791DAB96243A7A940052F194 /* StationsTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791DAB95243A7A940052F194 /* StationsTableViewDelegate.swift */; };
+		791DAB98243A7B520052F194 /* StationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791DAB97243A7B520052F194 /* StationsViewModel.swift */; };
+		793148B7243A6D78006EDEC0 /* GetNetworkStationsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793148B6243A6D78006EDEC0 /* GetNetworkStationsUseCase.swift */; };
+		793148C0243A7475006EDEC0 /* StationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793148BF243A7475006EDEC0 /* StationsViewController.swift */; };
+		793148C3243A74F3006EDEC0 /* StationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793148C2243A74F3006EDEC0 /* StationsView.swift */; };
 		79574EC0243674BF00013774 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79574EBF243674BF00013774 /* AppDelegate.swift */; };
 		79574EC9243674C100013774 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79574EC8243674C100013774 /* Assets.xcassets */; };
 		79574ECC243674C100013774 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79574ECA243674C100013774 /* LaunchScreen.storyboard */; };
@@ -139,6 +144,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		791DAB95243A7A940052F194 /* StationsTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsTableViewDelegate.swift; sourceTree = "<group>"; };
+		791DAB97243A7B520052F194 /* StationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsViewModel.swift; sourceTree = "<group>"; };
+		793148B6243A6D78006EDEC0 /* GetNetworkStationsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetNetworkStationsUseCase.swift; sourceTree = "<group>"; };
+		793148BF243A7475006EDEC0 /* StationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsViewController.swift; sourceTree = "<group>"; };
+		793148C2243A74F3006EDEC0 /* StationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsView.swift; sourceTree = "<group>"; };
 		79574EBC243674BF00013774 /* BugFreeMeme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BugFreeMeme.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79574EBF243674BF00013774 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79574EC8243674C100013774 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -254,6 +264,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		793148BE243A7468006EDEC0 /* Stations */ = {
+			isa = PBXGroup;
+			children = (
+				793148BF243A7475006EDEC0 /* StationsViewController.swift */,
+				791DAB95243A7A940052F194 /* StationsTableViewDelegate.swift */,
+			);
+			path = Stations;
+			sourceTree = "<group>";
+		};
+		793148C1243A74D1006EDEC0 /* Stations */ = {
+			isa = PBXGroup;
+			children = (
+				793148C2243A74F3006EDEC0 /* StationsView.swift */,
+				791DAB97243A7B520052F194 /* StationsViewModel.swift */,
+			);
+			path = Stations;
+			sourceTree = "<group>";
+		};
 		79574EB3243674BF00013774 = {
 			isa = PBXGroup;
 			children = (
@@ -359,6 +387,7 @@
 		79574F32243676FB00013774 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				793148BE243A7468006EDEC0 /* Stations */,
 				79574F36243677D000013774 /* Main */,
 				79574F332436770700013774 /* Root */,
 			);
@@ -384,6 +413,7 @@
 		79574F392436785200013774 /* User Interfaces */ = {
 			isa = PBXGroup;
 			children = (
+				793148C1243A74D1006EDEC0 /* Stations */,
 				79574F3A2436786100013774 /* Main */,
 			);
 			path = "User Interfaces";
@@ -479,6 +509,7 @@
 			children = (
 				79574F752437D39100013774 /* UseCase.swift */,
 				79574F772437D3B500013774 /* RefreshNetworksUseCase.swift */,
+				793148B6243A6D78006EDEC0 /* GetNetworkStationsUseCase.swift */,
 			);
 			path = "Use Case";
 			sourceTree = "<group>";
@@ -842,8 +873,12 @@
 			files = (
 				79574F38243677DD00013774 /* MainViewController.swift in Sources */,
 				79574F3C2436787C00013774 /* MainRootView.swift in Sources */,
+				793148C0243A7475006EDEC0 /* StationsViewController.swift in Sources */,
+				791DAB98243A7B520052F194 /* StationsViewModel.swift in Sources */,
 				79574F832437D91900013774 /* MainUXResponder.swift in Sources */,
 				79574F802437D73200013774 /* MainRootViewModel.swift in Sources */,
+				791DAB96243A7A940052F194 /* StationsTableViewDelegate.swift in Sources */,
+				793148C3243A74F3006EDEC0 /* StationsView.swift in Sources */,
 				79574F352436771A00013774 /* RootViewController.swift in Sources */,
 				79574F312436767600013774 /* BugFreeMemeAppDependencyContainer.swift in Sources */,
 			);
@@ -869,6 +904,7 @@
 				79574F7A2437D43300013774 /* Observable.swift in Sources */,
 				79574F782437D3B500013774 /* RefreshNetworksUseCase.swift in Sources */,
 				79574F7E2437D46600013774 /* Target.swift in Sources */,
+				793148B7243A6D78006EDEC0 /* GetNetworkStationsUseCase.swift in Sources */,
 				79574F762437D39100013774 /* UseCase.swift in Sources */,
 				79574F682436838900013774 /* Station.swift in Sources */,
 				79574F64243682A100013774 /* Network.swift in Sources */,

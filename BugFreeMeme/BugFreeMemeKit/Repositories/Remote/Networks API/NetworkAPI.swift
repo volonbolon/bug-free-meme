@@ -13,8 +13,10 @@ public enum NetworkAPIError: Error {
     case parsingError
 }
 
-public typealias NetworkAPICompletionHandlerForArray = (Either<NetworkAPIError, [Network]>) -> Void
+public typealias GetNetworksCompletionHandler = (Either<NetworkAPIError, [Network]>) -> Void
+public typealias GetStationsCompletionHandler = (Either<NetworkAPIError, [Station]>) -> Void
 
 public protocol NetworkAPI {
-    func getNetworks(completionHandler: @escaping NetworkAPICompletionHandlerForArray)
+    func getNetworks(completionHandler: @escaping GetNetworksCompletionHandler)
+    func getNetworkStations(completionHandler: @escaping GetStationsCompletionHandler)
 }

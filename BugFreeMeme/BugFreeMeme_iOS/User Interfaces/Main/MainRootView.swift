@@ -134,7 +134,9 @@ extension MainRootView: MKMapViewDelegate {
         if let network = self.networks.first(where: { network -> Bool in
             return network.id == annotationTitle
         }) {
-            print(network)
+            if let responder = viewModel.uxResponder {
+                responder.showStations(network: network)
+            }
         }
     }
 }

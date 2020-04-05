@@ -10,26 +10,35 @@ import UIKit
 import BugFreeMemeUIKit
 import BugFreeMemeKit
 
-open class MainViewController: NiblessViewController {
+public class MainViewController: NiblessViewController {
     let userInterface: MainRootView
     let refreshNetworksUseCaseFactory: RefreshNetworksUseCaseFactory
     let observable: Observable<[Network]>
     var useCase: UseCase?
-
-    init(userInterface: MainRootView,
-         refreshNetworksUseCaseFactory: RefreshNetworksUseCaseFactory,
-         observable: Observable<[Network]>) {
+    let showStationsFactory: (Network) -> StationsViewController
+    
+    public init(userInterface: MainRootView,
+                refreshNetworksUseCaseFactory: RefreshNetworksUseCaseFactory,
+                observable: Observable<[Network]>,
+                showStationsFactory: @escaping (Network) -> StationsViewController) {
         self.userInterface = userInterface
         self.refreshNetworksUseCaseFactory = refreshNetworksUseCaseFactory
         self.observable = observable
-
+        self.showStationsFactory = showStationsFactory
+        
         super.init()
     }
-
-    open override func loadView() {
+    
+    public override func loadView() {
         super.loadView()
-
+        
         self.view = userInterface
+    }
+    
+    public override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.title = NSLocalizedString("Networks", comment: "Networks")
     }
 }
 
@@ -42,5 +51,10 @@ extension MainViewController: MainUXResponder {
         let useCase = factory.makeRefreshNetworksUseCase(observable: self.observable)
         self.useCase = useCase
         useCase.start()
+    }
+
+    func showStations(network: Network) {
+        let stationsViewController = self.showStationsFactory(network)
+        self.navigationController?.pushViewController(stationsViewController, animated: true)
     }
 }

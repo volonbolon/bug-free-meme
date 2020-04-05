@@ -12,4 +12,5 @@ import BugFreeMemeKit
 protocol MainUXResponder: class {
     var observable: Observable<[Network]> { get }
     func refreshNetworks()
+    func showStations(network: Network)
 }
