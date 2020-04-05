@@ -22,7 +22,7 @@ public class GetNetworkStationsUseCase: UseCase {
     }
 
     public func start() {
-        self.remoteAPI.getNetworkStations { result in
+        self.remoteAPI.getNetworkStations { (result) in
             switch result {
             case .Left(let error):
                 print(error)
@@ -34,5 +34,6 @@ public class GetNetworkStationsUseCase: UseCase {
 }
 
 public protocol GetNetworkStationsUseCaseFactory {
-    func makeShowNetworkDetailsUseCase() -> UseCase
+    func makeGetNetworkStationsUseCase(networkId: String,
+                                       observable: Observable<[Station]>) -> UseCase
 }

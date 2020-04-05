@@ -29,11 +29,15 @@ class StationsTableViewDatasource: NSObject, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        let stations = self.observable.value
+        return stations.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let stations = self.observable.value
+        let station = stations[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: self.cellIdentifier, for: indexPath)
+        cell.textLabel?.text = station.name
         return cell
     }
 }

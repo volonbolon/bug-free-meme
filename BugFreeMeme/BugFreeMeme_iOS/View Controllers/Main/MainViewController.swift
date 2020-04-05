@@ -16,7 +16,7 @@ public class MainViewController: NiblessViewController {
     let observable: Observable<[Network]>
     var useCase: UseCase?
     let showStationsFactory: (Network) -> StationsViewController
-    
+
     public init(userInterface: MainRootView,
                 refreshNetworksUseCaseFactory: RefreshNetworksUseCaseFactory,
                 observable: Observable<[Network]>,
@@ -25,19 +25,19 @@ public class MainViewController: NiblessViewController {
         self.refreshNetworksUseCaseFactory = refreshNetworksUseCaseFactory
         self.observable = observable
         self.showStationsFactory = showStationsFactory
-        
+
         super.init()
     }
-    
+
     public override func loadView() {
         super.loadView()
-        
+
         self.view = userInterface
     }
-    
+
     public override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         self.title = NSLocalizedString("Networks", comment: "Networks")
     }
 }

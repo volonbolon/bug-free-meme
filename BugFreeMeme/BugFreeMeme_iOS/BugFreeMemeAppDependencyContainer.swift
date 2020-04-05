@@ -34,7 +34,10 @@ public struct BugFreeMemeAppDependencyContainer {
                                          stationsDelegate: tableViewDelegate,
                                          viewModel: viewModel)
         let viewController = StationsViewController(userInterface: userInterface,
-                                                    network: network)
+                                                    network: network,
+                                                    observable: observable,
+                                                    getNetworkStationsUseCaseFactory: self)
+        viewModel.uxResponder = viewController
         return viewController
     }
 
@@ -60,9 +63,13 @@ extension BugFreeMemeAppDependencyContainer: RefreshNetworksUseCaseFactory {
     }
 }
 
-//extension BugFreeMemeAppDependencyContainer: ShowNetworkDetailsUseCaseFactory {
-//    public func makeShowNetworkDetailsUseCase() -> UseCase {
-//        let networkAPI = self.makeRemoteAPI()
-//        let useCase
-//    }
-//}
+extension BugFreeMemeAppDependencyContainer: GetNetworkStationsUseCaseFactory {
+    public func makeGetNetworkStationsUseCase(networkId: String,
+                                              observable: Observable<[Station]>) -> UseCase {
+        let remoteAPI = self.makeRemoteAPI()
+        let useCase = GetNetworkStationsUseCase(remoteAPI: remoteAPI,
+                                                networkId: networkId,
+                                                observable: observable)
+        return useCase
+    }
+}

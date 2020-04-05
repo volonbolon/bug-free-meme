@@ -7,3 +7,9 @@
 //
 
 import Foundation
+import BugFreeMemeKit
+
+protocol StationsUXResponder: class {
+    var observable: Observable<[Station]> { get }
+    func loadStations()
+}

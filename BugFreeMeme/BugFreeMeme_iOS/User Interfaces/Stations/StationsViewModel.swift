@@ -10,7 +10,7 @@ import UIKit
 import BugFreeMemeKit
 
 public class StationsViewModel: NSObject {
-    weak var uxResponder: MainUXResponder?
+    weak var uxResponder: StationsUXResponder?
     weak var observable: Observable<[Station]>?
 
     init(observable: Observable<[Station]>) {
