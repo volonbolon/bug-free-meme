@@ -40,6 +40,13 @@
 		79574F6A2436845000013774 /* Either.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79574F692436845000013774 /* Either.swift */; };
 		79574F6F243684AD00013774 /* NetworkAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79574F6E243684AD00013774 /* NetworkAPI.swift */; };
 		79574F722436852000013774 /* FakeNetworkAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79574F712436852000013774 /* FakeNetworkAPI.swift */; };
+		79574F762437D39100013774 /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79574F752437D39100013774 /* UseCase.swift */; };
+		79574F782437D3B500013774 /* RefreshNetworksUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79574F772437D3B500013774 /* RefreshNetworksUseCase.swift */; };
+		79574F7A2437D43300013774 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79574F792437D43300013774 /* Observable.swift */; };
+		79574F7C2437D45100013774 /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79574F7B2437D45100013774 /* Bindable.swift */; };
+		79574F7E2437D46600013774 /* Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79574F7D2437D46600013774 /* Target.swift */; };
+		79574F802437D73200013774 /* MainRootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79574F7F2437D73200013774 /* MainRootViewModel.swift */; };
+		79574F832437D91900013774 /* MainUXResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79574F822437D91900013774 /* MainUXResponder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -172,6 +179,13 @@
 		79574F692436845000013774 /* Either.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Either.swift; sourceTree = "<group>"; };
 		79574F6E243684AD00013774 /* NetworkAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAPI.swift; sourceTree = "<group>"; };
 		79574F712436852000013774 /* FakeNetworkAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeNetworkAPI.swift; sourceTree = "<group>"; };
+		79574F752437D39100013774 /* UseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCase.swift; sourceTree = "<group>"; };
+		79574F772437D3B500013774 /* RefreshNetworksUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshNetworksUseCase.swift; sourceTree = "<group>"; };
+		79574F792437D43300013774 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		79574F7B2437D45100013774 /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
+		79574F7D2437D46600013774 /* Target.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Target.swift; sourceTree = "<group>"; };
+		79574F7F2437D73200013774 /* MainRootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRootViewModel.swift; sourceTree = "<group>"; };
+		79574F822437D91900013774 /* MainUXResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainUXResponder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -323,6 +337,7 @@
 		79574F142436761000013774 /* BugFreeMeme_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				79574F812437D8FF00013774 /* Responders */,
 				79574F392436785200013774 /* User Interfaces */,
 				79574F32243676FB00013774 /* View Controllers */,
 				79574F152436761000013774 /* BugFreeMeme_iOS.h */,
@@ -378,6 +393,7 @@
 			isa = PBXGroup;
 			children = (
 				79574F3B2436787C00013774 /* MainRootView.swift */,
+				79574F7F2437D73200013774 /* MainRootViewModel.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -385,6 +401,8 @@
 		79574F462436827D00013774 /* BugFreeMemeKit */ = {
 			isa = PBXGroup;
 			children = (
+				79574F742437D37900013774 /* Use Case */,
+				79574F7324369DCA00013774 /* Observer */,
 				79574F6B2436847F00013774 /* Repositories */,
 				79574F622436828F00013774 /* Models */,
 				79574F472436827D00013774 /* BugFreeMemeKit.h */,
@@ -444,6 +462,33 @@
 				79574F712436852000013774 /* FakeNetworkAPI.swift */,
 			);
 			path = Implementations;
+			sourceTree = "<group>";
+		};
+		79574F7324369DCA00013774 /* Observer */ = {
+			isa = PBXGroup;
+			children = (
+				79574F792437D43300013774 /* Observable.swift */,
+				79574F7B2437D45100013774 /* Bindable.swift */,
+				79574F7D2437D46600013774 /* Target.swift */,
+			);
+			path = Observer;
+			sourceTree = "<group>";
+		};
+		79574F742437D37900013774 /* Use Case */ = {
+			isa = PBXGroup;
+			children = (
+				79574F752437D39100013774 /* UseCase.swift */,
+				79574F772437D3B500013774 /* RefreshNetworksUseCase.swift */,
+			);
+			path = "Use Case";
+			sourceTree = "<group>";
+		};
+		79574F812437D8FF00013774 /* Responders */ = {
+			isa = PBXGroup;
+			children = (
+				79574F822437D91900013774 /* MainUXResponder.swift */,
+			);
+			path = Responders;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -797,6 +842,8 @@
 			files = (
 				79574F38243677DD00013774 /* MainViewController.swift in Sources */,
 				79574F3C2436787C00013774 /* MainRootView.swift in Sources */,
+				79574F832437D91900013774 /* MainUXResponder.swift in Sources */,
+				79574F802437D73200013774 /* MainRootViewModel.swift in Sources */,
 				79574F352436771A00013774 /* RootViewController.swift in Sources */,
 				79574F312436767600013774 /* BugFreeMemeAppDependencyContainer.swift in Sources */,
 			);
@@ -814,10 +861,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79574F7C2437D45100013774 /* Bindable.swift in Sources */,
 				79574F722436852000013774 /* FakeNetworkAPI.swift in Sources */,
 				79574F6A2436845000013774 /* Either.swift in Sources */,
 				79574F6F243684AD00013774 /* NetworkAPI.swift in Sources */,
 				79574F662436831000013774 /* Location.swift in Sources */,
+				79574F7A2437D43300013774 /* Observable.swift in Sources */,
+				79574F782437D3B500013774 /* RefreshNetworksUseCase.swift in Sources */,
+				79574F7E2437D46600013774 /* Target.swift in Sources */,
+				79574F762437D39100013774 /* UseCase.swift in Sources */,
 				79574F682436838900013774 /* Station.swift in Sources */,
 				79574F64243682A100013774 /* Network.swift in Sources */,
 			);

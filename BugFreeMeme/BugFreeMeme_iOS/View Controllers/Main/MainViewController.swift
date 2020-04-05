@@ -8,12 +8,20 @@
 
 import UIKit
 import BugFreeMemeUIKit
+import BugFreeMemeKit
 
 open class MainViewController: NiblessViewController {
     let userInterface: MainRootView
+    let refreshNetworksUseCaseFactory: RefreshNetworksUseCaseFactory
+    let observable: Observable<[Network]>
+    var useCase: UseCase?
 
-    init(userInterface: MainRootView) {
+    init(userInterface: MainRootView,
+         refreshNetworksUseCaseFactory: RefreshNetworksUseCaseFactory,
+         observable: Observable<[Network]>) {
         self.userInterface = userInterface
+        self.refreshNetworksUseCaseFactory = refreshNetworksUseCaseFactory
+        self.observable = observable
 
         super.init()
     }
@@ -22,5 +30,17 @@ open class MainViewController: NiblessViewController {
         super.loadView()
 
         self.view = userInterface
+    }
+}
+
+extension MainViewController { // MARK: Helpers
+}
+
+extension MainViewController: MainUXResponder {
+    func refreshNetworks() {
+        let factory = self.refreshNetworksUseCaseFactory
+        let useCase = factory.makeRefreshNetworksUseCase(observable: self.observable)
+        self.useCase = useCase
+        useCase.start()
     }
 }

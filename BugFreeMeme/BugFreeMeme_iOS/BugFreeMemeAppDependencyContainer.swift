@@ -8,9 +8,14 @@
 
 import Foundation
 import BugFreeMemeUIKit
+import BugFreeMemeKit
 
 public struct BugFreeMemeAppDependencyContainer {
     public init() {}
+
+    public func makeRemoteAPI() -> NetworkAPI {
+        return FakeNetworkAPI()
+    }
 
     public func makeRootViewController() -> RootViewController {
         let mainViewController = self.makeMainViewController()
@@ -20,8 +25,22 @@ public struct BugFreeMemeAppDependencyContainer {
     }
 
     public func makeMainViewController() -> MainViewController {
-        let userInterface = MainRootView(frame: .zero)
-        let viewController = MainViewController(userInterface: userInterface)
+        let observable = Observable<[Network]>([])
+        let viewModel = MainRootViewModel(observable: observable)
+        let userInterface = MainRootView(viewModel: viewModel)
+        let viewController = MainViewController(userInterface: userInterface,
+                                                refreshNetworksUseCaseFactory: self,
+                                                observable: observable)
+        viewModel.uxResponder = viewController
         return viewController
+    }
+}
+
+extension BugFreeMemeAppDependencyContainer: RefreshNetworksUseCaseFactory {
+    public func makeRefreshNetworksUseCase(observable: Observable<[Network]>) -> UseCase {
+        let networkAPI = self.makeRemoteAPI()
+        let useCase = RefreshNetworksUseCase(remoteAPI: networkAPI,
+                                             observable: observable)
+        return useCase
     }
 }

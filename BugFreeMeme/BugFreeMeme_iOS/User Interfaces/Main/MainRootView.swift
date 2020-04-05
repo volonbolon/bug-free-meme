@@ -9,13 +9,24 @@
 import UIKit
 import BugFreeMemeUIKit
 import MapKit
+import CoreLocation
+import BugFreeMemeKit
 
 public class MainRootView: NiblessView {
     private var hierarchyNotReady = true
+    private var mapLoaded = false
+    let viewModel: MainRootViewModel
+
+    init(viewModel: MainRootViewModel) {
+        self.viewModel = viewModel
+
+        super.init(frame: .zero)
+    }
 
     var mapView: MKMapView = {
         let mapView = MKMapView(frame: .zero)
         mapView.translatesAutoresizingMaskIntoConstraints = false
+        mapView.showsUserLocation = true
 
         return mapView
     }()
@@ -29,6 +40,7 @@ public class MainRootView: NiblessView {
 
         self.constructHierarchy()
         self.activateConstraints()
+        self.bindViewModel()
 
         self.backgroundColor = UIColor.white
 
@@ -37,8 +49,31 @@ public class MainRootView: NiblessView {
 }
 
 extension MainRootView { // MARK: - Helpers
+    fileprivate func bindViewModel() {
+        self.viewModel.observable?.bind { networks in
+            self.dropPins(networks: networks)
+        }
+    }
+
+    fileprivate func dropPins(networks: [Network]) {
+        guard self.mapLoaded else {
+            return
+        }
+
+        networks.forEach { network in
+            let location = network.location
+            let coordinate = CLLocationCoordinate2D(latitude: location.latitude,
+                                                    longitude: location.longitude)
+            let pin = MKPointAnnotation()
+            pin.coordinate = coordinate
+            pin.title = network.id
+            self.mapView.addAnnotation(pin)
+        }
+    }
+
     fileprivate func constructHierarchy() {
         self.addSubview(self.mapView)
+        self.mapView.delegate = self
     }
 
     private func activateMapViewConstraints() {
@@ -57,5 +92,17 @@ extension MainRootView { // MARK: - Helpers
 
     fileprivate func activateConstraints() {
         self.activateMapViewConstraints()
+    }
+}
+
+
+extension MainRootView: MKMapViewDelegate {
+    public func mapViewWillStartLoadingMap(_ mapView: MKMapView) {
+        self.mapLoaded = false
+    }
+
+    public func mapViewDidFinishLoadingMap(_ mapView: MKMapView) {
+        self.mapLoaded = true
+        self.viewModel.uxResponder?.refreshNetworks()
     }
 }
