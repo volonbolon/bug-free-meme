@@ -13,9 +13,11 @@ import CoreLocation
 import BugFreeMemeKit
 
 public class MainRootView: NiblessView {
+    private static let pinIdentifier = "pin"
     private var hierarchyNotReady = true
     private var mapLoaded = false
     let viewModel: MainRootViewModel
+    var networks: [Network] = []
 
     init(viewModel: MainRootViewModel) {
         self.viewModel = viewModel
@@ -27,6 +29,8 @@ public class MainRootView: NiblessView {
         let mapView = MKMapView(frame: .zero)
         mapView.translatesAutoresizingMaskIntoConstraints = false
         mapView.showsUserLocation = true
+        mapView.register(MKMarkerAnnotationView.self,
+                         forAnnotationViewWithReuseIdentifier: MainRootView.pinIdentifier)
 
         return mapView
     }()
@@ -51,7 +55,8 @@ public class MainRootView: NiblessView {
 extension MainRootView { // MARK: - Helpers
     fileprivate func bindViewModel() {
         self.viewModel.observable?.bind { networks in
-            self.dropPins(networks: networks)
+            self.networks = networks
+            self.dropPins(networks: self.networks)
         }
     }
 
@@ -104,5 +109,32 @@ extension MainRootView: MKMapViewDelegate {
     public func mapViewDidFinishLoadingMap(_ mapView: MKMapView) {
         self.mapLoaded = true
         self.viewModel.uxResponder?.refreshNetworks()
+    }
+
+    public func mapView(_ mapView: MKMapView,
+                        viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        guard !(annotation is MKUserLocation) else {
+            return nil
+        }
+
+        let annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: MainRootView.pinIdentifier,
+                                                                   for: annotation)
+        annotationView.canShowCallout = true
+        annotationView.rightCalloutAccessoryView = UIButton(type: .infoDark)
+
+        return annotationView
+    }
+
+    public func mapView(_ mapView: MKMapView,
+                        annotationView view: MKAnnotationView,
+                        calloutAccessoryControlTapped control: UIControl) {
+        guard let annotationTitle = view.annotation?.title else {
+            return
+        }
+        if let network = self.networks.first(where: { network -> Bool in
+            return network.id == annotationTitle
+        }) {
+            print(network)
+        }
     }
 }
