@@ -11,11 +11,19 @@ import BugFreeMemeKit
 
 class StationsTableViewDelegate: NSObject, UITableViewDelegate {
     let viewModel: StationsViewModel
+    let observable: Observable<[Station]>
 
-    init(viewModel: StationsViewModel) {
+    init(viewModel: StationsViewModel, observable: Observable<[Station]>) {
         self.viewModel = viewModel
+        self.observable = observable
 
         super.init()
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let station = observable.value[indexPath.row]
+        self.viewModel.uxResponder?.goToStationDetails(station)
     }
 }
 

@@ -12,4 +12,5 @@ import BugFreeMemeKit
 protocol StationsUXResponder: class {
     var observable: Observable<[Station]> { get }
     func loadStations()
+    func goToStationDetails(_ station: Station)
 }

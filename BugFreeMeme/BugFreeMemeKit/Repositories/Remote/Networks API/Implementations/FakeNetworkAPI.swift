@@ -29,10 +29,6 @@ public struct FakeNetworkAPI: NetworkAPI {
     }
 }
 
-struct DecodableNetworks: Decodable {
-    let networks: [Network]
-}
-
 extension FakeNetworkAPI { // MARK: Fake loaders
     private func getNetworksData() -> Data? {
         var data: Data? = nil

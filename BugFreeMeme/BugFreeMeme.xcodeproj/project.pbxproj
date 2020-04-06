@@ -53,6 +53,7 @@
 		79574F7E2437D46600013774 /* Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79574F7D2437D46600013774 /* Target.swift */; };
 		79574F802437D73200013774 /* MainRootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79574F7F2437D73200013774 /* MainRootViewModel.swift */; };
 		79574F832437D91900013774 /* MainUXResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79574F822437D91900013774 /* MainUXResponder.swift */; };
+		797B4DEC243B88460031F97E /* DecodableNetworks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797B4DEB243B88460031F97E /* DecodableNetworks.swift */; };
 		79BB5E6B243B784500E867DF /* networks.json in Resources */ = {isa = PBXBuildFile; fileRef = 79BB5E6A243B784500E867DF /* networks.json */; };
 /* End PBXBuildFile section */
 
@@ -199,6 +200,7 @@
 		79574F7D2437D46600013774 /* Target.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Target.swift; sourceTree = "<group>"; };
 		79574F7F2437D73200013774 /* MainRootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRootViewModel.swift; sourceTree = "<group>"; };
 		79574F822437D91900013774 /* MainUXResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainUXResponder.swift; sourceTree = "<group>"; };
+		797B4DEB243B88460031F97E /* DecodableNetworks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableNetworks.swift; sourceTree = "<group>"; };
 		79BB5E6A243B784500E867DF /* networks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = networks.json; path = ../../../../../../../../../Desktop/networks.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -461,6 +463,7 @@
 				79574F652436831000013774 /* Location.swift */,
 				79574F672436838900013774 /* Station.swift */,
 				79574F692436845000013774 /* Either.swift */,
+				797B4DEB243B88460031F97E /* DecodableNetworks.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -906,6 +909,7 @@
 			files = (
 				79574F7C2437D45100013774 /* Bindable.swift in Sources */,
 				79574F722436852000013774 /* FakeNetworkAPI.swift in Sources */,
+				797B4DEC243B88460031F97E /* DecodableNetworks.swift in Sources */,
 				79574F6A2436845000013774 /* Either.swift in Sources */,
 				79574F6F243684AD00013774 /* NetworkAPI.swift in Sources */,
 				79574F662436831000013774 /* Location.swift in Sources */,

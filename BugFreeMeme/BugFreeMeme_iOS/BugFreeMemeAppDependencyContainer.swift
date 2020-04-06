@@ -29,7 +29,8 @@ public struct BugFreeMemeAppDependencyContainer {
         let viewModel = StationsViewModel(observable: observable)
         let tableViewDatasource = StationsTableViewDatasource(cellIdentifier: StationsView.StationsViewCellIdentifier,
                                                               observable: observable)
-        let tableViewDelegate = StationsTableViewDelegate(viewModel: viewModel)
+        let tableViewDelegate = StationsTableViewDelegate(viewModel: viewModel,
+                                                          observable: observable)
         let userInterface = StationsView(stationsDatasource: tableViewDatasource,
                                          stationsDelegate: tableViewDelegate,
                                          viewModel: viewModel)

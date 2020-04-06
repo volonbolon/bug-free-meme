@@ -42,6 +42,14 @@ public class StationsViewController: NiblessViewController {
 }
 
 extension StationsViewController: StationsUXResponder {
+    func goToStationDetails(_ station: Station) {
+        let alert = UIAlertController(title: station.name, message: station.description, preferredStyle: .actionSheet)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(okAction)
+
+        self.present(alert, animated: true, completion: nil)
+    }
+
     func loadStations() {
         let factory = self.getNetworkStationsUseCaseFactory
         let useCase = factory.makeGetNetworkStationsUseCase(networkId: self.network.id,
