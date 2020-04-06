@@ -10,15 +10,24 @@ import Foundation
 
 public struct Station: Equatable, Codable {
     public let id: String
-    public let empty_slots: Int
-    public let free_bikes: Int
+    public let emptySlots: Int
+    public let freeBikes: Int
     public let latitude: Double
     public let longitude: Double
     public let name: String
+
+    enum CodingKeys: String, CodingKey {
+        case id
+        case emptySlots = "empty_slots"
+        case freeBikes = "free_bikes"
+        case latitude
+        case longitude
+        case name
+    }
 }
 
 extension Station: CustomStringConvertible {
     public var description: String {
-        return "\(self.name): Free Bikes: \(self.free_bikes) | Empty Slots: \(self.empty_slots)"
+        return "\(self.name): Free Bikes: \(self.freeBikes) | Empty Slots: \(self.emptySlots)"
     }
 }

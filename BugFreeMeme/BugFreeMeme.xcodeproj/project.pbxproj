@@ -53,6 +53,7 @@
 		79574F7E2437D46600013774 /* Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79574F7D2437D46600013774 /* Target.swift */; };
 		79574F802437D73200013774 /* MainRootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79574F7F2437D73200013774 /* MainRootViewModel.swift */; };
 		79574F832437D91900013774 /* MainUXResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79574F822437D91900013774 /* MainUXResponder.swift */; };
+		79BB5E6B243B784500E867DF /* networks.json in Resources */ = {isa = PBXBuildFile; fileRef = 79BB5E6A243B784500E867DF /* networks.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -198,6 +199,7 @@
 		79574F7D2437D46600013774 /* Target.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Target.swift; sourceTree = "<group>"; };
 		79574F7F2437D73200013774 /* MainRootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRootViewModel.swift; sourceTree = "<group>"; };
 		79574F822437D91900013774 /* MainUXResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainUXResponder.swift; sourceTree = "<group>"; };
+		79BB5E6A243B784500E867DF /* networks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = networks.json; path = ../../../../../../../../../Desktop/networks.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -491,6 +493,7 @@
 		79574F702436850400013774 /* Implementations */ = {
 			isa = PBXGroup;
 			children = (
+				79BB5E6A243B784500E867DF /* networks.json */,
 				79574F712436852000013774 /* FakeNetworkAPI.swift */,
 			);
 			path = Implementations;
@@ -822,6 +825,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79BB5E6B243B784500E867DF /* networks.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
