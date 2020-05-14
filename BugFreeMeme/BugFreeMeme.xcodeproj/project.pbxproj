@@ -54,7 +54,7 @@
 		79574F802437D73200013774 /* MainRootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79574F7F2437D73200013774 /* MainRootViewModel.swift */; };
 		79574F832437D91900013774 /* MainUXResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79574F822437D91900013774 /* MainUXResponder.swift */; };
 		797B4DEC243B88460031F97E /* DecodableNetworks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797B4DEB243B88460031F97E /* DecodableNetworks.swift */; };
-		79BB5E6B243B784500E867DF /* networks.json in Resources */ = {isa = PBXBuildFile; fileRef = 79BB5E6A243B784500E867DF /* networks.json */; };
+		79DD96D1245771E7009DDA80 /* networks.json in Resources */ = {isa = PBXBuildFile; fileRef = 79DD96D0245771E7009DDA80 /* networks.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -201,7 +201,7 @@
 		79574F7F2437D73200013774 /* MainRootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRootViewModel.swift; sourceTree = "<group>"; };
 		79574F822437D91900013774 /* MainUXResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainUXResponder.swift; sourceTree = "<group>"; };
 		797B4DEB243B88460031F97E /* DecodableNetworks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableNetworks.swift; sourceTree = "<group>"; };
-		79BB5E6A243B784500E867DF /* networks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = networks.json; path = ../../../../../../../../../Desktop/networks.json; sourceTree = "<group>"; };
+		79DD96D0245771E7009DDA80 /* networks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = networks.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -496,7 +496,7 @@
 		79574F702436850400013774 /* Implementations */ = {
 			isa = PBXGroup;
 			children = (
-				79BB5E6A243B784500E867DF /* networks.json */,
+				79DD96D0245771E7009DDA80 /* networks.json */,
 				79574F712436852000013774 /* FakeNetworkAPI.swift */,
 			);
 			path = Implementations;
@@ -828,7 +828,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79BB5E6B243B784500E867DF /* networks.json in Resources */,
+				79DD96D1245771E7009DDA80 /* networks.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
